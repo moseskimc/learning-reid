@@ -33,6 +33,8 @@ We use conda to install necessary dependencies. The most important package we ne
 
     # install torchreid (don't need to re-build it if you modify the source code)
     python setup.py develop
+    # if you find yourself with a distutils version error, downgrade setuptools
+    pip install setuptools==59.5.0
 
 
 Also, make sure to install tensorflow
