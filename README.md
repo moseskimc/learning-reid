@@ -65,6 +65,11 @@ There are few steps happening in this script:
 - Then, all the frames appearing afterwards are considered target features
 - We compute the Euclidean distance of the query feature against the target features and rank by increasing order
 
+Here are some conclusions I drew from running the main script.
+- Using a model trained across different domains (i.e. Market1501, DukeMTMC-ReID, and MSMT17), made the embedding more robust regardless of the subject's pose and movement.
+- The choice of the inception model was mainly due to the total size; needed something light to run the whole pipeline smoothly without a GPU (i.e. running 100 frames takes a few minutes).
+- One interesting next step would be to look at nonoverlapping camera view angles and test how well the reid model performs.
+
 
 ## Notebooks
 
