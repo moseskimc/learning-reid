@@ -1,0 +1,11 @@
+input:
+  frames_path: "./data/pets09/View_001_small/"  # this dataset consists of the first 100 frames
+  query_frame: 0
+
+output:
+  fps: 5.0
+  save_path: "./output/video_dets_small.mp4"
+
+model:
+  inception: "models/faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.pb"
+  reid: "models/osnet_ain_ms_d_c.pth.tar"
