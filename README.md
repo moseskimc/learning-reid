@@ -35,6 +35,10 @@ We use conda to install necessary dependencies. The most important package we ne
     python setup.py develop
 
 
+Also, make sure to install tensorflow
+
+    pip install tensorflow
+
 
 ## Models
 
