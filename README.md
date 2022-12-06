@@ -14,7 +14,7 @@ Tsere are specific instructions as to what data one needs to upload in the noteb
 
 ## Environment
 
-We use conda to install necessary dependencies. The most important package we need to install is `torchreid`, which has been cloned inside this repo for your convenience. Run the following commands (found in the official readme [here](https://github.com/KaiyangZhou/deep-person-reid)).
+We use conda to install necessary dependencies. The most important package we need to install is `torchreid`. Run the following commands (found in the official readme [here](https://github.com/KaiyangZhou/deep-person-reid)).
 
     # cd to your preferred directory and clone this repo
     git clone https://github.com/KaiyangZhou/deep-person-reid.git
@@ -60,7 +60,7 @@ Once you have modified the config params in `confs/config.yml`, run the followin
 There are few steps happening in this script:
 - We instantiate two model classes (inception to detect humans; reid to create embeddings or latent features)
 - For each frame, we generate human detection bounding boxes which are then used to crop the frame
-- Each crop is then further processed to generate feature vector using our reid model
+- Each crop is then further processed to generate a feature vector using our reid model
 - In order to reid a query, we choose a query frame where the first detection is chosen as our query feature
 - Then, all the frames appearing afterwards are considered target features
 - We compute the Euclidean distance of the query feature against the target features and rank by increasing order
